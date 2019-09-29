@@ -85,16 +85,17 @@ void print(pList phead){
 int main(){
 	char a[100];
 	pList head=init();
+	printf("链表初始化完成\n软件工程创新实验班-高新宇-2018204495\n"); 
 	while(1){
 		gets(a);
-		if(!strcmp(a,"插入")){
+		if(!strcmp(a,"链表插入")){
 			int x;
 			char y;
 			scanf("%d %c",&x,&y);
 			Insert(head,x,y);
 			print(head);
 		}
-		else if(!strcmp(a,"按下标查找")){
+		else if(!strcmp(a,"按下标查寻")){
 			int x;
 			scanf("%d",&x);
 			pList p=FindX(head,x);
@@ -103,27 +104,27 @@ int main(){
 			else
 			printf("%c\n",p->date);
 		} 
-		else if(!strcmp(a,"按元素查找")){
+		else if(!strcmp(a,"按元素查寻")){
 			char x[10];
 			scanf("%s",x);
 			int p=FindY(head,x[0]);
 			if(p>=Length(head))
-			printf("元素不存在\n");
+			printf("链表不够长\n");
 			else
 			printf("%d\n",p);
 		}
-		else if(!strcmp(a,"删除")){
+		else if(!strcmp(a,"删除元素")){
 			int x;
 			scanf("%d",&x);
 			Delete(head,x);
 			print(head);
 		} 
-		else if(!strcmp(a,"修改")){
+		else if(!strcmp(a,"修改链表元素")){
 			int x;
 			char y;
 			scanf("%d %c",&x,&y);
 			if(x>=Length(head)){
-				printf("下标越界\n");
+				printf("链表越界\n");
 			}
 			else{
 				pList p=FindX(head,x);
