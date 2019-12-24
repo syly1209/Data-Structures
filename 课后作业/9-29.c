@@ -2,6 +2,7 @@
 #include<string.h>
 int main(){
 	char a[100];
+	while(1){
 	int l=-1;
 	while((a[++l]=getchar())!='@');
 	a[l]='\0';
@@ -26,5 +27,7 @@ int main(){
 		else
 		printf("Yes\n");
 	}
+	}
+	
 	return 0;
 }
